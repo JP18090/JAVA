@@ -9,3 +9,4 @@ public class abstractClaas {
         campanha2.exibirMetrica();
     }
 }
+// Para gerar o javaDoc --> javadoc -d ./docs -sourcepath ./src 
