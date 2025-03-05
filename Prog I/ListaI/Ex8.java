@@ -6,7 +6,7 @@ import java.util.Scanner;
 	a) A quantidade de convites a serem vendidos para que o custo do espetáculo seja alcançado.
 	b) A quantidade de convites vendidos para obter um lucro de 23%.
  */
-public class Main {
+public class Ex8 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Digite o custo de produção do espetaculo teatral:");

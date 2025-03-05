@@ -1,10 +1,12 @@
 
+import java.util.Scanner;
+
 public class Ex3 {
     public static void main(String[] args) {
-        System.out.println(" J   a   v     v  a");
-        System.out.println(" J  a a   v   v  a a");
-        System.out.println("J J aaaaa   V V  aaaaa");
-        System.out.println("JJJ a   a   V  a   a");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite seu nome completo: ");
+        String nome = sc.nextLine();
+        System.out.println("Parabens! " + nome + ", você completou o EX3");
     }
 }
 
