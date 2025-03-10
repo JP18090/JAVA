@@ -1,3 +1,4 @@
+package gerenciador;
 import java.util.List;
 
 public interface GerenciadorNomes {

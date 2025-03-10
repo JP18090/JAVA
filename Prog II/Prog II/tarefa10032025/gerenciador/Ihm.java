@@ -1,4 +1,6 @@
+package gerenciador;
 import java.util.*;
+
 import static java.lang.System.out;
 public class Ihm {
     private GerenciadorNomes gerenciador;

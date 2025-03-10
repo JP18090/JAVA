@@ -1,3 +1,4 @@
+package gerenciador;
 import java.util.*;
 
 public class GerenciadorNomesMem implements GerenciadorNomes {
