@@ -1,4 +1,4 @@
-package src.main.java;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 public class SupabaseConnection {
-    private static final String URL = "jdbc:postgresql://db.wiibbznyohtdkcwwvepu.supabase.co:5432/postgres?user=postgres&password=[Lab03AnaBob1234]";
+    private static final String URL = "jpostgresql://postgres:[YOUR-PASSWORD]@db.wiibbznyohtdkcwwvepu.supabase.co:5432/postgres";
     private static final String USER = "postgres";
     private static final String PASSWORD = "Lab03AnaBob1234"; // Substitua pela senha real
 

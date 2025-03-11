@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GerenciadorNomesBD implements GerenciadorNomes {
-    private static final String URL = "jdbc:postgresql://db.cqgngbsqokoryfogebqk.supabase.co:5432/postgres";
+    private static final String URL = "postgresql://postgres:@db.wiibbznyohtdkcwwvepu.supabase.co:5432/postgres";
     private static final String USUARIO = "Magnorjunior";
-    private static final String SENHA = "AnaANDBob...";
+    private static final String SENHA = "Lab03AnaBob1234";
 
     public GerenciadorNomesBD() {
         try (Connection conn = DriverManager.getConnection(URL, USUARIO, SENHA);

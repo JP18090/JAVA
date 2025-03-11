@@ -3,7 +3,7 @@ package TADListaLinear;
 public class Main {
     public static void main(String[] args) {
         // Criação de uma instância da classe vetor com capacidade 100
-        vetor Lista = new vetor(100);
+        vetor Lista = new vetor(5);
         
         try {
             // Testando os métodos da classe vetor

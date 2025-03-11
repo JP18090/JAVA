@@ -54,7 +54,7 @@ public class vetor {
         }
         // Coloca o novo elemento na posição i
         A[i] = n;
-        size++; // Aumenta o tamanho do vetor
+        size++; // Aumenta o tamanho do vetoR
     }
     public void remove(int i) throws Exception {
         // Remove o elemento da posição i
