@@ -8,10 +8,8 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 public class SupabaseConnection {
-    private static final String URL = "jpostgresql://postgres:[YOUR-PASSWORD]@db.wiibbznyohtdkcwwvepu.supabase.co:5432/postgres";
-    private static final String USER = "postgres";
-    private static final String PASSWORD = "Lab03AnaBob1234"; // Substitua pela senha real
-
+    private static final String URL = "jpostgresql://postgres:[Lab03AnaBob1234]@db.wiibbznyohtdkcwwvepu.supabase.co:5432/postgres";
+    
 
     public static void main(String[] args) {
         try {
@@ -19,7 +17,7 @@ public class SupabaseConnection {
             Class.forName("org.postgresql.Driver");
 
             // Estabelecendo a conexão
-            Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
+            Connection conn = DriverManager.getConnection(URL);
             System.out.println("Conectado ao Supabase com sucesso!");
 
             // Lendo a entrada do usuário para inserir um novo nome

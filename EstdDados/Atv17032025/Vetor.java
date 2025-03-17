@@ -1,6 +1,5 @@
 package Atv17032025;
 
-
 public class Vetor {
     private Gamer[] lista;
     private int tamanho;
@@ -10,26 +9,38 @@ public class Vetor {
         tamanho = 0;
     }
 
-    public boolean estaVazio() {
-        return tamanho == 0;
+    public boolean isEmpty() {
+        if (tamanho == 0)
+            return true;
+        else
+            return false;
     }
 
-    public boolean estaCheio() {
+    public boolean isFull() {
         return tamanho == lista.length;
     }
 
-    // Método para inserir um Gamer de forma ordenada pelo score (maior para menor)
-    public void inserir(Gamer gamer) {
-        if (estaCheio()) {
+    // Método para adicionar um jogador ordenado por score
+    public void add(String nome, int score) {
+        if (isFull()) {
             System.out.println("A lista está cheia. Não é possível adicionar mais jogadores.");
             return;
         }
 
-        int i;
-        for (i = tamanho - 1; i >= 0 && lista[i].getScore() < gamer.getScore(); i--) {
-            lista[i + 1] = lista[i];
+        Gamer novoGamer = new Gamer(nome, score);
+        int posicao = 0;
+
+        // Encontrar a posição correta para inserir o jogador (mantendo ordem decrescente de score)
+        while (posicao < tamanho && lista[posicao].getScore() > score) {
+            posicao++;
         }
-        lista[i + 1] = gamer;
+
+        // Move os elementos para a direita para abrir espaço para o novo elemento
+        for (int i = tamanho; i > posicao; i--) {
+            lista[i] = lista[i - 1];
+        }
+
+        lista[posicao] = novoGamer;
         tamanho++;
     }
 
@@ -38,7 +49,6 @@ public class Vetor {
             System.out.println("Posição inválida.");
             return;
         }
-
         for (int i = posicao; i < tamanho - 1; i++) {
             lista[i] = lista[i + 1];
         }
@@ -47,19 +57,29 @@ public class Vetor {
     }
 
     public Gamer getPrimeiro() {
-        if (!estaVazio()) {
+        if (isEmpty()) {
             return lista[0];
         }
         return null;
     }
 
     public void exibirLista() {
-        if (estaVazio()) {
+        if (isEmpty()) {
             System.out.println("A lista está vazia.");
         } else {
             for (int i = 0; i < tamanho; i++) {
                 System.out.println(lista[i]);
             }
         }
+    }
+
+    // Método para achar a posição de um jogador com base no score
+    public int achaPos(int pontos) {
+        for (int i = 0; i < tamanho; i++) {
+            if (lista[i].getScore() == pontos) {
+                return i;
+            }
+        }
+        return -1; 
     }
 }
