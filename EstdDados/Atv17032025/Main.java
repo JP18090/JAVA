@@ -8,12 +8,12 @@ public class Main {
         Vetor ranking = new Vetor(10);
 
         // Adicionando jogadores 
-        System.out.println("Digite o nome do jogador: ");
+        System.out.print("Digite o nome do jogador: ");
         String nome = sc.nextLine();
-        System.out.println("Digite o score deste jogador: ");
+        System.out.print("Digite o score deste jogador: ");
         int score = sc.nextInt();
         ranking.add(nome, score);
-        
+
         // Jogadores ja inseridos 
         ranking.add("Mike", 1105);
         ranking.add("Rob", 750);
