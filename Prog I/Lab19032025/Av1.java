@@ -9,9 +9,9 @@
 
  public class Av1 {
      public static void main(String[] args) {
-         Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
          
-         double[] produto = new double[10];
+        double[] produto = new double[10];
         for (int i = 0; i < produto.length; i++) {
             System.out.println("Digite o preço do produto número " + (i + 1) + ": ");
             produto[i] = sc.nextDouble();
@@ -29,7 +29,9 @@
         for (int i = 0; i < produto.length; i++) {
             double novoPreco = produto[i] - (produto[i] * desconto / 100);
             System.out.println("Produto " + (i + 1) + " com desconto: R$ " + novoPreco);
-         }
+        }
     }
- }
+}
  
+
+// Produzido por José Pedro Bitetti
