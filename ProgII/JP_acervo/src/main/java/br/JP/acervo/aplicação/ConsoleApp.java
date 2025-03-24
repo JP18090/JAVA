@@ -1,11 +1,12 @@
-package ProgII.JP_acervo.src.main.java.br.JP.acervo.aplicação;
+package br.JP.acervo.aplicação;
 
-import ProgII.JP_acervo.src.main.java.br.JP.acervo.Repositorio.LivroRepository;
-import ProgII.JP_acervo.src.main.java.br.JP.acervo.entidade.Livro;
-
+import org.springframework.stereotype.Component;
+import br.JP.acervo.entidade.Livro;
+import br.JP.acervo.Repositorio.LivroRepository;
 import java.util.List;
 import java.util.Scanner;
 
+@Component
 public class ConsoleApp {
     private final LivroRepository livroRepository;
     private final Scanner scanner = new Scanner(System.in);
@@ -13,7 +14,7 @@ public class ConsoleApp {
     public ConsoleApp(LivroRepository livroRepository) {
         this.livroRepository = livroRepository;
     }
-
+    
     public void iniciar() {
         while (true) {
             System.out.println("\n[Menu Principal]");

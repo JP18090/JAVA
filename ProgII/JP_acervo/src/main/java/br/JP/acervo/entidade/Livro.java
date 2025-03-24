@@ -1,4 +1,4 @@
-package ProgII.JP_acervo.src.main.java.br.JP.acervo.entidade;
+package br.JP.acervo.entidade;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -7,8 +7,9 @@ import jakarta.persistence.GenerationType;
 
 @Entity
 public class Livro {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)  // Correct placement for @GeneratedValue
     private Long id;
     private String titulo;
     private String autor;

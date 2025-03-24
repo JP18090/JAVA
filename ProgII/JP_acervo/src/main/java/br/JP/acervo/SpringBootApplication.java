@@ -1,4 +1,4 @@
-package ProgII.JP_acervo.src.main.java.br.JP.acervo;
+package br.JP.acervo;
 
 public @interface SpringBootApplication {
 
