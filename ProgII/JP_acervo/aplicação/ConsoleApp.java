@@ -1,4 +1,4 @@
-package br.JP.aplicacao;
+package ProgII.JP_acervo.aplicação;
 
 import br.JP.acervo.Livro;
 import br.JP.acervo.LivroRepository;

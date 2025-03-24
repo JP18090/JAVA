@@ -1,4 +1,4 @@
-package br.JP.acervo;
+package ProgII.JP_acervo.src.main.java.br.JP.acervo;
 
 import br.JP.acervo.aplicacao.ConsoleApp;
 import org.springframework.beans.factory.annotation.Autowired;

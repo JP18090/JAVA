@@ -1,4 +1,4 @@
-package br.JP.acervo;
+package ProgII.JP_acervo.Repositorio;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

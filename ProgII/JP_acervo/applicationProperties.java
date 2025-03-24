@@ -1,4 +1,4 @@
-package src.main.resources; 
+package ProgII.JP_acervo;
 
 # Configuração do banco H2 em memória
 spring.datasource.url=jdbc:h2:mem:acervoDB
