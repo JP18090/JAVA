@@ -1,14 +1,23 @@
 package br.JP.acervo;
 
+import br.JP.acervo.aplicação.ConsoleApp;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.orm.jpa.EntityScan;
 
 @SpringBootApplication
-@EntityScan(basePackages = "br.JP.acervo.entidade")  // Garantir que o Spring Boot escaneie as entidades
-public class AcervoApplication {
-    
+public class AcervoApplication implements CommandLineRunner {
+
+    @Autowired
+    ConsoleApp consoleApp;
+
     public static void main(String[] args) {
         SpringApplication.run(AcervoApplication.class, args);
+    }
+
+    @Override
+    public void run(String... args) {
+        consoleApp.iniciar();
     }
 }

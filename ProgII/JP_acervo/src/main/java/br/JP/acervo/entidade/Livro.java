@@ -1,16 +1,14 @@
 package br.JP.acervo.entidade;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 
 @Entity
 public class Livro {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)  // Correct placement for @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String titulo;
     private String autor;
     private int anoPublicacao;
@@ -27,17 +25,11 @@ public class Livro {
 
     public Long getId() { return id; }
     public String getTitulo() { return titulo; }
-    public String getAutor() { return autor; }
-    public int getAnoPublicacao() { return anoPublicacao; }
-    public String getEditora() { return editora; }
-
     public void setTitulo(String titulo) { this.titulo = titulo; }
+    public String getAutor() { return autor; }
     public void setAutor(String autor) { this.autor = autor; }
+    public int getAnoPublicacao() { return anoPublicacao; }
     public void setAnoPublicacao(int anoPublicacao) { this.anoPublicacao = anoPublicacao; }
+    public String getEditora() { return editora; }
     public void setEditora(String editora) { this.editora = editora; }
-
-    @Override
-    public String toString() {
-        return id + " | " + titulo + " | " + autor + " | " + anoPublicacao + " | " + editora;
-    }
 }
