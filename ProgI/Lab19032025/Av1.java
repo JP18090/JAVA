@@ -1,3 +1,4 @@
+package ProgI.Lab19032025;
 /*
  * Você foi contratado para desenvolver um sistema que auxilia na análise de preços de produtos em uma loja de calçados. 
  * Seu objetivo é criar um programa em Java que armazene os preços dos produtos da loja, sendo que a loja possui 10 produtos diferentes.
