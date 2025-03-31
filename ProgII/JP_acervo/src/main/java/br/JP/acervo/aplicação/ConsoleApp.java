@@ -1,7 +1,7 @@
-package br.JP.acervo.aplicacao;
+package br.JP.acervo.aplicação;
 
 import br.JP.acervo.entidade.Livro;
-import br.JP.acervo.repositorio.LivroRepository;
+import br.JP.acervo.Repositorio.LivroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -65,10 +65,10 @@ public class ConsoleApp {
 
     private void listarLivros() {
         System.out.println("\n[Listagem Completa do Acervo]");
-        System.out.println("ID | Título          | Autor       | Ano | Editora");
+        System.out.println("ID | Título               | Autor       | Ano | Editora");
         System.out.println("---------------------------------------------------------------");
         livroRepository.findAll().forEach(l -> 
-            System.out.printf("%2d | %-28s | %-17s | %4d | %s\n", l.getId(), l.getTitulo(), l.getAutor(), l.getAnoPublicacao(), l.getEditora())
+            System.out.printf("%2d | %-20s | %-11s | %3d | %s\n", l.getId(), l.getTitulo(), l.getAutor(), l.getAnoPublicacao(), l.getEditora())
         );
     }
 
