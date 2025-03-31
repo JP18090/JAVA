@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        int[] vetor = new int[10]; // Tamanho do vetor
+        int[] vetor = new int[10]; 
         int opcao;
 
         do {
@@ -66,7 +66,10 @@ public class Main {
     }
 
     public static void imprimirVetor(int[] vetor) {
-        
+        for(int i = 0; i < vetor.length; i++){
+            System.out.printf("%2.f", vetor[i]);
+        }
+        System.out.println();
     }
 
     public static void verificarNumero(int[] vetor, Scanner scanner) {
