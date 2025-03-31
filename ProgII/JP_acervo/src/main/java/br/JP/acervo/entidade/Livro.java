@@ -13,6 +13,9 @@ public class Livro {
     private String autor;
     private int anoPublicacao;
     private String editora;
+    // @ManyToMany(fetch = FetchType.LAZY)
+    // @JoinColumn(name = "biblioteca_id", nullable = false)
+    // private Biblioteca biblioteca;
 
     public Livro() {}
 

@@ -6,11 +6,10 @@ import java.util.List;
 
 public class GerenciadorNomesBD implements GerenciadorNomes {
     private static final String URL = "postgresql://postgres:@db.wiibbznyohtdkcwwvepu.supabase.co:5432/postgres";
-    private static final String USUARIO = "Magnorjunior";
-    private static final String SENHA = "Lab03AnaBob1234";
+    
 
     public GerenciadorNomesBD() {
-        try (Connection conn = DriverManager.getConnection(URL, USUARIO, SENHA);
+        try (Connection conn = DriverManager.getConnection(URL);
              Statement stmt = conn.createStatement()) {
             String sql = "CREATE TABLE IF NOT EXISTS nomes (id SERIAL PRIMARY KEY, nome VARCHAR(20) NOT NULL)";
             stmt.executeUpdate(sql);
@@ -22,7 +21,7 @@ public class GerenciadorNomesBD implements GerenciadorNomes {
     @Override
     public List<String> obterNomes() {
         List<String> nomes = new ArrayList<>();
-        try (Connection conn = DriverManager.getConnection(URL, USUARIO, SENHA);
+        try (Connection conn = DriverManager.getConnection(URL);
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery("SELECT nome FROM nomes")) {
             while (rs.next()) {
