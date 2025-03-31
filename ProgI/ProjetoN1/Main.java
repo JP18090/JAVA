@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         Random random = new Random();
         int[] vetor = new int[10]; 
         int opcao;
@@ -22,7 +22,7 @@ public class Main {
             System.out.println("8. Verificar se dado um valor existe dois números em posições distintas que somados são iguais ao valor informado");
             System.out.println("9. Sair");
             System.out.print("Escolha uma opção: ");
-            opcao = scanner.nextInt();
+            opcao = sc.nextInt();
 
             switch (opcao) {
                 case 1:
@@ -33,7 +33,7 @@ public class Main {
                     imprimirVetor(vetor);
                     break;
                 case 3:
-                    verificarNumero(vetor, scanner);
+                    verificarNumero(vetor, sc);
                     break;
                 case 4:
                     buscarMaiorNumero(vetor);
@@ -48,7 +48,7 @@ public class Main {
                     calcularMediaCentralizada(vetor);
                     break;
                 case 8:
-                    verificarSoma(vetor, scanner);
+                    verificarSoma(vetor, sc);
                     break;
                 case 9:
                     System.out.println("Saindo...");
@@ -58,22 +58,36 @@ public class Main {
             }
         } while (opcao != 9);
 
-        scanner.close();
+        sc.close();
     }
 
     public static void inicializarVetor(int[] vetor, Random random) {
-        
+        for (int i = 0; i < vetor.length; i++) {
+            vetor[i] = random.nextInt(1000);
+        }
     }
 
     public static void imprimirVetor(int[] vetor) {
-        for(int i = 0; i < vetor.length; i++){
-            System.out.printf("%2.f", vetor[i]);
+        for (int i = 0; i < vetor.length; i++) {
+            System.out.printf("%d ", vetor[i]); 
         }
         System.out.println();
     }
-
-    public static void verificarNumero(int[] vetor, Scanner scanner) {
+    
+    public static void verificarNumero(int[] vetor, Scanner sc) {
+        System.out.print("Digite o número que deseja buscar no vetor: ");
+        int num = sc.nextInt();
         
+        for (int i = 0; i < vetor.length; i++) {
+            if (vetor[i] == num) {
+                System.out.println("Número encontrado no índice: " + i);
+                    break;
+            } else {
+                System.out.println("Numero digitado não encontrado!");
+                    break;
+            }        
+            // não ta achando o vetor
+        }
     }
 
     public static void buscarMaiorNumero(int[] vetor) {
